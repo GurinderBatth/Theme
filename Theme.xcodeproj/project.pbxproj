@@ -13,6 +13,7 @@
 		1846782E21B3A4A300E70737 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782D21B3A4A300E70737 /* SecondViewController.swift */; };
 		1846783021B3A4AF00E70737 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782F21B3A4AF00E70737 /* ThirdViewController.swift */; };
 		1846783221B41A0800E70737 /* GBThemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846783121B41A0800E70737 /* GBThemeTextField.swift */; };
+		1889ACED21B6DD9B004D3D41 /* GBThemeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889ACEC21B6DD9B004D3D41 /* GBThemeImageView.swift */; };
 		18A2410121B2A48C0036ED8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2410021B2A48C0036ED8D /* AppDelegate.swift */; };
 		18A2410321B2A48C0036ED8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2410221B2A48C0036ED8D /* ViewController.swift */; };
 		18A2410621B2A48C0036ED8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A2410421B2A48C0036ED8D /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		1846782D21B3A4A300E70737 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1846782F21B3A4AF00E70737 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		1846783121B41A0800E70737 /* GBThemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBThemeTextField.swift; sourceTree = "<group>"; };
+		1889ACEC21B6DD9B004D3D41 /* GBThemeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBThemeImageView.swift; sourceTree = "<group>"; };
 		18A240FD21B2A48C0036ED8D /* Theme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A2410021B2A48C0036ED8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A2410221B2A48C0036ED8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1889ACEE21B6DDA9004D3D41 /* GBTheme */ = {
+			isa = PBXGroup;
+			children = (
+				1846782B21B3A2BC00E70737 /* GBTheme.swift */,
+				1846782721B39D3400E70737 /* GBThemeView.swift */,
+				1846782921B3A13300E70737 /* GBThemeButton.swift */,
+				1846783121B41A0800E70737 /* GBThemeTextField.swift */,
+				1889ACEC21B6DD9B004D3D41 /* GBThemeImageView.swift */,
+			);
+			path = GBTheme;
+			sourceTree = "<group>";
+		};
+		1889ACEF21B6DDBB004D3D41 /* GBThemeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18A2410221B2A48C0036ED8D /* ViewController.swift */,
+				1846782D21B3A4A300E70737 /* SecondViewController.swift */,
+				1846782F21B3A4AF00E70737 /* ThirdViewController.swift */,
+			);
+			path = GBThemeControllers;
+			sourceTree = "<group>";
+		};
 		18A240F421B2A48C0036ED8D = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				18A2410021B2A48C0036ED8D /* AppDelegate.swift */,
-				18A2410221B2A48C0036ED8D /* ViewController.swift */,
-				1846782B21B3A2BC00E70737 /* GBTheme.swift */,
-				1846782721B39D3400E70737 /* GBThemeView.swift */,
-				1846782921B3A13300E70737 /* GBThemeButton.swift */,
-				1846783121B41A0800E70737 /* GBThemeTextField.swift */,
-				1846782D21B3A4A300E70737 /* SecondViewController.swift */,
-				1846782F21B3A4AF00E70737 /* ThirdViewController.swift */,
+				1889ACEF21B6DDBB004D3D41 /* GBThemeControllers */,
+				1889ACEE21B6DDA9004D3D41 /* GBTheme */,
 				18A2410421B2A48C0036ED8D /* Main.storyboard */,
 				18A2410721B2A48E0036ED8D /* Assets.xcassets */,
 				18A2410921B2A48E0036ED8D /* LaunchScreen.storyboard */,
@@ -276,6 +295,7 @@
 			files = (
 				1846782E21B3A4A300E70737 /* SecondViewController.swift in Sources */,
 				1846782821B39D3400E70737 /* GBThemeView.swift in Sources */,
+				1889ACED21B6DD9B004D3D41 /* GBThemeImageView.swift in Sources */,
 				18A2410321B2A48C0036ED8D /* ViewController.swift in Sources */,
 				1846783021B3A4AF00E70737 /* ThirdViewController.swift in Sources */,
 				1846782A21B3A13300E70737 /* GBThemeButton.swift in Sources */,

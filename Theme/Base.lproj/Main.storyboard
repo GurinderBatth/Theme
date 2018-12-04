@@ -24,11 +24,24 @@
                                 </connections>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-iq-mhk" customClass="GBThemeView" customModule="Theme" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="298" width="240" height="128"/>
+                                <rect key="frame" x="20.5" y="298" width="334" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b1" translatesAutoresizingMaskIntoConstraints="NO" id="5iy-c0-bI5" customClass="GBThemeImageView" customModule="Theme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="39" width="334" height="50"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="nightThemeImage" value="b2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7aH-2g-2Km"/>
+                                    <constraint firstItem="5iy-c0-bI5" firstAttribute="leading" secondItem="Dqf-iq-mhk" secondAttribute="leading" id="Cho-5L-bQs"/>
+                                    <constraint firstItem="5iy-c0-bI5" firstAttribute="centerX" secondItem="Dqf-iq-mhk" secondAttribute="centerX" id="Jkl-h9-1Fu"/>
+                                    <constraint firstItem="5iy-c0-bI5" firstAttribute="centerX" secondItem="Dqf-iq-mhk" secondAttribute="centerX" id="MNm-ho-Pc9"/>
+                                    <constraint firstAttribute="trailing" secondItem="5iy-c0-bI5" secondAttribute="trailing" id="V2g-DJ-MM9"/>
                                     <constraint firstAttribute="height" constant="128" id="aEp-MQ-Vj4"/>
+                                    <constraint firstItem="5iy-c0-bI5" firstAttribute="centerY" secondItem="Dqf-iq-mhk" secondAttribute="centerY" id="dbQ-mY-r9j"/>
+                                    <constraint firstItem="5iy-c0-bI5" firstAttribute="centerY" secondItem="Dqf-iq-mhk" secondAttribute="centerY" id="z54-GV-ckz"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="nightThemeBackgroundColor">
@@ -66,19 +79,18 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="1"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="nightThemeRightImage" value="2"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="1x"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="nightThemeLeftImage" value="2x"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="nightThemeBackgroundColor">
                                         <color key="value" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="1x"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-mq-Jaj" customClass="GBThemeButton" customModule="Theme" customModuleProvider="target">
-                                <rect key="frame" x="20.5" y="456" width="334" height="50"/>
+                                <rect key="frame" x="172.5" y="456" width="30" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tuL-tB-dam"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="b1">
+                                <state key="normal">
                                     <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -88,7 +100,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="nightThemeBorderColor">
                                         <color key="value" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="nightThemeBackgroundImage" value="b2"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="nightThemeImage" value="b2"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
@@ -251,7 +263,6 @@
         <image name="1" width="32" height="32"/>
         <image name="1x" width="13" height="13"/>
         <image name="2" width="32" height="32"/>
-        <image name="2x" width="14" height="15"/>
         <image name="b1" width="334" height="50"/>
         <image name="b2" width="334" height="50"/>
     </resources>

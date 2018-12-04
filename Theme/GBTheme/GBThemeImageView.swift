@@ -1,15 +1,15 @@
 //
-//  GBThemeButton.swift
+//  GBThemeImageView.swift
 //  Theme
 //
-//  Created by Apple on 02/12/18.
+//  Created by Apple on 04/12/18.
 //  Copyright © 2018 Batth. All rights reserved.
 //
 
 import UIKit
 
-class GBThemeButton: UIButton {
-
+class GBThemeImageView: UIImageView {
+    
     private var defaultBackgroundColor: UIColor!
     private var defaultTextColor: UIColor!
     private var defaultBorderColor: UIColor?
@@ -19,10 +19,8 @@ class GBThemeButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        defaultTextColor = self.currentTitleColor
         defaultBackgroundColor = self.backgroundColor ?? .clear
-        defaultImage = self.currentImage
-        defaultBackgroundImage = self.currentBackgroundImage
+        defaultImage = self.image
         self.setupNotifications()
         defer {
             self.isNightTheme = GBTheme.theme.isNightMode
@@ -31,17 +29,15 @@ class GBThemeButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        defaultTextColor = self.currentTitleColor
         defaultBackgroundColor = self.backgroundColor ?? .clear
-        defaultImage = self.currentImage
-        defaultBackgroundImage = self.currentBackgroundImage
+        defaultImage = self.image
         self.setupNotifications()
         defer {
             self.isNightTheme = GBTheme.theme.isNightMode
         }
     }
     
-//MARK:-  Public Properties
+    //MARK:-  Public Properties
     @IBInspectable var nightThemeBackgroundColor: UIColor? = .black{
         didSet{
             if isNightTheme{
@@ -50,33 +46,13 @@ class GBThemeButton: UIButton {
         }
     }
     
-    @IBInspectable var nightThemeTextColor: UIColor? = .white{
-        didSet{
-            if isNightTheme{
-                self.setTitleColor(nightThemeTextColor, for: .normal)
-            }
-        }
-    }
-    
     @IBInspectable var nightThemeImage: UIImage?{
         didSet{
             if isNightTheme{
                 if nightThemeImage != nil{
-                    self.setImage(nightThemeImage, for: .normal)
+                    self.image = nightThemeImage
                 }else{
-                    self.setImage(nightThemeImage, for: .normal)
-                }
-            }
-        }
-    }
-    
-    @IBInspectable var nightThemeBackgroundImage: UIImage?{
-        didSet{
-            if isNightTheme{
-                if nightThemeBackgroundImage != nil{
-                    self.setBackgroundImage(nightThemeBackgroundImage, for: .normal)
-                }else{
-                    self.setBackgroundImage(nightThemeBackgroundImage, for: .normal)
+                    self.image = self.defaultImage
                 }
             }
         }
@@ -97,7 +73,7 @@ class GBThemeButton: UIButton {
         }
     }
     
-//MARK:-  Private Functions
+    //MARK:-  Private Functions
     private func setupNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(lightMode), name: .lightMode, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(nightMode), name: .nightMode, object: nil)
@@ -115,31 +91,23 @@ class GBThemeButton: UIButton {
         didSet{
             if isNightTheme{
                 self.backgroundColor = nightThemeBackgroundColor ?? .black
-                self.setTitleColor(nightThemeTextColor ?? .white, for: .normal)
                 if self.nightThemeBorderColor != nil{
                     self.layer.borderColor = self.nightThemeBorderColor?.cgColor
                 }
-                if self.currentImage != nil{
-                    if self.nightThemeImage == nil{
-                        self.setImage(defaultImage, for: .normal)
-                    }else{
-                        self.setImage(nightThemeImage, for: .normal)
-                    }
-                }
-                if self.currentBackgroundImage != nil{
-                    self.setBackgroundImage(nightThemeBackgroundImage, for: .normal)
+                if self.nightThemeImage == nil{
+                    self.image = defaultImage
+                }else{
+                    self.image = nightThemeImage
                 }
             }else{
                 if self.nightThemeBorderColor != nil{
                     self.layer.borderColor = self.defaultBorderColor?.cgColor
                 }
                 self.backgroundColor = self.defaultBackgroundColor
-                self.setTitleColor(self.defaultTextColor, for: .normal)
                 if self.defaultImage != nil{
-                    self.setImage(defaultImage, for: .normal)
-                }
-                if self.defaultBackgroundImage != nil{
-                    self.setBackgroundImage(defaultBackgroundImage, for: .normal)
+                    self.image = defaultImage
+                }else{
+                    self.image = nil
                 }
             }
         }
